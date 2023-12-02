@@ -1,0 +1,139 @@
+# Project information
+site_name: dumitrux's blog
+site_url: https://dumitrux.github.io/blog/
+site_author: dumitrux
+site_description: >-
+  Blog posts about DevOps, Cloud Computing, Linux, Infrastructure as Code,
+  Terraform, Terragrunt, AWS, Ansible, Docker, Kubernetes, etc.
+
+# Repository
+repo_name: dumitrux/blog
+repo_url: https://github.com/dumitrux/blog
+
+# Copyright
+copyright: Copyright &copy; 2023 Marian-Dumitru Danci
+# copyright: |
+#   &copy; 2023 <a href="https://github.com/dumitrux"  target="_blank" rel="noopener">Marian Dumitru Danci</a>
+
+# Configuration
+theme:
+  name: material
+  logo: assets/images/devops.png
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  icon:
+    annotation: material/information
+    logo: logo
+  language: en
+  palette:
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.ico
+
+# Plugins
+plugins:
+  - blog:
+      blog_dir: .
+      blog_toc: true
+      post_url_format: "{categories}/{slug}"
+      post_url_max_categories: 2
+      categories_toc: true
+  - glightbox
+  - minify:
+      minify_html: true
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/dumitrux
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/dumitruxx
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/dumitrux
+
+# # Extra stylesheets
+# extra_css:
+#   - stylesheets/extra.css
+
+# # Extra JavaScript
+# extra_javascript:
+#   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+#   - javascripts/tablesort.js
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true 
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# Page tree
+# nav:
+#   - Home: index.md
+#   - IDE:
+#     - VSCode: vscode.md
+
+  # - Setup:
+  #   - setup/index.md
+  #   - Changing the colors: setup/changing-the-colors.md

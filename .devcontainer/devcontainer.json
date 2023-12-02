@@ -1,0 +1,17 @@
+{
+    "name": "MkDocs",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "yzhang.markdown-all-in-one"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers-contrib/features/mkdocs:2": {
+            "plugins": "mkdocs-material mkdocs-minify-plugin mkdocs-glightbox"
+        }
+    }
+}
